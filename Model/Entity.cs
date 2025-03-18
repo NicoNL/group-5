@@ -1,3 +1,3 @@
 class Entity{
-    public static final String NAME = "";
+    public static final String NAME = "adil";
 }
