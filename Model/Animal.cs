@@ -54,7 +54,7 @@ public class Animal
     // Eating and drinking
     private void Eat(Plant food)
     {
-        Console.WriteLine($"Eating {food.Name}.");
+        Console.WriteLine($"Eating {food.getName()}.");
         HungerLevel = 0;
     }
 
