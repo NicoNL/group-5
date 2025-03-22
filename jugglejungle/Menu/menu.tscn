@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dq0bkt8cbojud"]
 
-[ext_resource type="Texture2D" uid="uid://bcaaudaa4pjoe" path="res://SafariBackGround.jpg" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://bi6ls58t24qgs" path="res://Menu.cs" id="1_ouk20"]
+[ext_resource type="Script" uid="uid://bi6ls58t24qgs" path="res://Menu/Menu.cs" id="1_ihied"]
+[ext_resource type="Texture2D" uid="uid://bcaaudaa4pjoe" path="res://Menu/SafariBackGround.jpg" id="2_raj00"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ouk20")
+script = ExtResource("1_ihied")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -18,7 +18,7 @@ offset_left = 7.0
 offset_top = -115.0
 offset_right = 1799.0
 offset_bottom = 909.0
-texture = ExtResource("1_lti8b")
+texture = ExtResource("2_raj00")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
