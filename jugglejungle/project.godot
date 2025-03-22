@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="JuggleJungle"
-run/main_scene="uid://b367wxn8b5wvg"
+run/main_scene="uid://dq0bkt8cbojud"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 

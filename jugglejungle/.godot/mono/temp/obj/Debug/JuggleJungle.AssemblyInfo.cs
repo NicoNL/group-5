@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JuggleJungle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a285d43cb8b3d137f53834870a43966fb453b1e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0019e53e2723a84d89dde5de9de704a24b807ff1")]
 [assembly: System.Reflection.AssemblyProductAttribute("JuggleJungle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JuggleJungle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

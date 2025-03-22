@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dq0bkt8cbojud"]
 
-[ext_resource type="Texture2D" path="res://SafariBackGround.jpg" id="1_lti8b"]
-[ext_resource type="Script" path="res://Menu.cs" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://bcaaudaa4pjoe" path="res://SafariBackGround.jpg" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://bi6ls58t24qgs" path="res://Menu.cs" id="1_ouk20"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3

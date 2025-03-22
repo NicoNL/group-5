@@ -1,0 +1,8 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1742645420
+game.tscn::PackedScene::5133793703288593025::1742645128::0::1::::<><><>0<>0<><>::res://icon.svg
+icon.svg::CompressedTexture2D::6745241850382582108::1742204970::1742645422::1::::<><><>0<>0<>f5c2ae83ece0f2e331d4c74358f7b4a7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main_menu.tscn::PackedScene::8680041703530500335::1742644946::0::1::::<><><>0<>0<><>::
+Menu.cs::CSharpScript::3012628801963495126::1742643940::0::1::::<><><>0<>0<><>::
+menu.tscn::PackedScene::8333972617086098127::1742645128::0::1::::<><><>0<>0<><>::res://SafariBackGround.jpg<>res://Menu.cs
+SafariBackGround.jpg::CompressedTexture2D::2526834244456668364::1742639407::1742645423::1::::<><><>0<>0<>9a0caf828137d4f75f0cbeadb982d58b<>res://.godot/imported/SafariBackGround.jpg-323e9776b1566b22fc01c2909681ea4f.ctex::
