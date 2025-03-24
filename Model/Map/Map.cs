@@ -24,11 +24,11 @@ public class Map
     }
     public int carnivoreCount()
     {
-        return animals.stream().filter(animal->animal instanceof Carnivore).count();
+        return animals.OfType<Carnivore>().Count();
     }
     public int herbivoreCount()
     {
-        return animals.stream().filter(animal->animal instanceof Herbivore).count();
+        return animals.OfType<Herbivore>().Count();
     }
     public int animalCount()
     {

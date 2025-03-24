@@ -70,14 +70,20 @@ public class GameManager
     }
     public void increaseCapital(double amount)
     {
-        capital -= amount;
+        capital += amount;
     }
-
-    public void decreaseCapital(double amount)
+    //THIS METHOD RETURNS A BOOL TO CHECK IF THERE IS ENOUGH CAPITAL
+    //CHECK SHOP MANAGER FOR FURTHER UNDERSTANDING
+    public bool decreaseCapital(double amount)
     {
-        capital -= amount;
+        if(capital - amount <= 0){
+            capital -= amount;
+        }else{
+            return false;
+        }
+        return true;
     }
-    public getCurrentCapital()
+    public int getCurrentCapital()
     {
         return capital;
     }

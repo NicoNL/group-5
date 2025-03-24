@@ -4,6 +4,9 @@ using System.Numerics;
 public abstract class Animal
 {
     public int LifespanLimit { get; set; }
+    private Dictionary<Animal, double> availableAnimals; 
+    private AnimalType Type;
+    private Species species;
     public int Age { get; private set; }
     public int ConsumpLevel { get; set; }
     public bool CanReproduce { get; private set; }
@@ -20,11 +23,13 @@ public abstract class Animal
         private set { price = value; }
     }
 
-    public Animal(int lifespanLimit, int consumpLevel, double price)
+    public Animal(int lifespanLimit, int consumpLevel, double price, AnimalType type, Species species)
     {
         LifespanLimit = lifespanLimit;
         ConsumpLevel = consumpLevel;
         Price = price;
+        this.type = type;
+        this.species = species;
         Age = 0;
         CanReproduce = false;
         HungerLevel = 0;
@@ -85,6 +90,9 @@ public abstract class Animal
         }
         Console.WriteLine("Reproduction failed.");
         return null;
+    }
+    public Species getSpecies(){
+        return species;
     }
 
     // Age and health management

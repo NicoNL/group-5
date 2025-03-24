@@ -1,5 +1,7 @@
-public class Carnivore extends Animal {
-    public Carnivore(int lifespanLimit, int consumpLevel, double price) {
-        super(lifespanLimit, consumpLevel, price); 
+using System.Threading;
+
+public class Carnivore : Animal {
+    public Carnivore(int lifespanLimit, int consumpLevel, double price, Species species) {
+        super(lifespanLimit, consumpLevel, price,AnimalType.CARNIVORE, species); 
     }
 }
