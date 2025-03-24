@@ -7,15 +7,11 @@ using System.Runtime.CompilerServices;
 public class GameManager
 {
     private double gameTime;
-    // INFO: Fix this calculation issue #1    private int[] date;
+    // INFO: Fix this calculation issue #1    
+    private int[] date;
     private double capital;
 
     // INFO: Animal lists are now in the gameManager because it contains the elemetns of the player  #2
-    private ArrayList<Animal> animals = ArrayList<Animal>;
-    private ArrayList<Tourist> tourists = ArrayList<Tourist>;
-    private ArrayList<Ranger> rangers = ArrayList<Ranger>;
-    private ArrayList<Pond> ponds = ArrayList<Pond>;
-    private ArrayList<Road> roads = ArrayList<Road>;
     private GameState gameState;
     // INFO :  MODE is an enum containg the three lvls of difficulty #3
     private Mode difficulty;
@@ -87,42 +83,29 @@ public class GameManager
     }
     public void AddAnimal(Animal animal)
     {
-        animals.Add(animal);
-    }
-    //ADDED COUNTS 
-    public int carnivoreCount()
-    {
-        return animals.stream().filter(animal->animal instanceof Carnivore).count();
-    }
-    public int herbivoreCount()
-    {
-        return animals.stream().filter(animal->animal instanceof Herbivore).count();
-    }
-    public int animalCount()
-    {
-        return animals.Count();
+        mapAddAnimal.Add(animal);
     }
     public List<Animal> getAllAnimals()
     {
-        return animals;
+        return Map.getAllAnimals();
     }
     public addTourist(Tourist tourist)
     {
-        tourists.Add(tourist);
+        map.AddTourist(tourist);
     }
     public removeTourist(Tourist tourist)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        tourists.remove(tourist);
+        map.removeTourist(tourist);
     }
     public void getAllTourists()
     {
-        return tourists;
+        return map.getAllTourists();
     }
 
     public addRanger(Ranger ranger)
     {
-        rangers.Add(ranger);
+        map.AddRanger(ranger);
     }
     public removeRanger(Ranger ranger)
     {
@@ -136,30 +119,30 @@ public class GameManager
 
     public addPond(Pond pond)
     {
-        ponds.Add(pond);
+        map.AddPon(pond);
     }
     public removePond(Pond pond)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        ponds.remove(pond);
+        map.removePond(pond);
     }
     public void getAllPonds()
     {
-        return ponds;
+        return map.getAllPonds;
     }
 
     public addRoad(Road road)
     {
-        roads.Add(road);
+        map.addRoad(road);
     }
     public removeRoad(Road road)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        roads.remove(road);
+        map.removeRoad(road);
     }
     public void getAllRoads()
     {
-        return roads;
+        return map.getAllRoads();
     }
     public bool checkWinningCondition()
     {
@@ -176,5 +159,14 @@ public class GameManager
     public void setGameState(GameState state)
     {
         gameState = state;
+    }
+    public int getDay(){
+        return date[0];
+    }
+    public int getMonth(){
+        return date[1];
+    }
+    public int getYear(){
+        return date[2];
     }
 }
