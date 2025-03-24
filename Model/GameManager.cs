@@ -7,18 +7,17 @@ using System.Runtime.CompilerServices;
 public class GameManager
 {
     private double gameTime;
-    // DATE is and array of 3 integers containing the format dd/mm/yyyy
-    private int[] date;
+    // INFO: Fix this calculation issue #1    private int[] date;
     private double capital;
 
-    //Animal lists are now in the gameManager because it contains the elemetns of the player
+    // INFO: Animal lists are now in the gameManager because it contains the elemetns of the player  #2
     private ArrayList<Animal> animals = ArrayList<Animal>;
     private ArrayList<Tourist> tourists = ArrayList<Tourist>;
     private ArrayList<Ranger> rangers = ArrayList<Ranger>;
     private ArrayList<Pond> ponds = ArrayList<Pond>;
     private ArrayList<Road> roads = ArrayList<Road>;
     private GameState gameState;
-    // MODE is an enum containg the three lvls of difficulty
+    // INFO :  MODE is an enum containg the three lvls of difficulty #3
     private Mode difficulty;
     private Map map;
 
@@ -50,8 +49,7 @@ public class GameManager
     {
         //Placeholder to use next day 
     }
-    //ADDED SOME FUNCTIONS FOR THE BEHAVIOR OF THE TIME,
-    //FOR SIMPLICIITY I CONSIDER EVERY MONTH AS A 30-DAY MONTH
+    // INFO : ADDED SOME FUNCTIONS FOR THE BEHAVIOR OF THE TIME, FOR SIMPLICIITY I CONSIDER EVERY MONTH AS A 30-DAY MONTH # 3
     private void nextDay()
     {
         date[0]++;
