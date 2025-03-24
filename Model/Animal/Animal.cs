@@ -1,7 +1,7 @@
 using System;
 using System.Numerics;
 
-public class Animal
+public abstract class Animal
 {
     public int LifespanLimit { get; set; }
     public int Age { get; private set; }
