@@ -1,0 +1,2 @@
+# Ignore Godot Mono temporary files
+.godot/mono/temp/
