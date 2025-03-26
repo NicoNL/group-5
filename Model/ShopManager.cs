@@ -6,7 +6,13 @@ public class ShopManager
     private Dictionary<Species, double> availableAnimals;
     private Dictionary<PlantType, double> availablePlants;
     private int availablePonds;
+    private int availablePoacher;
+    private int availableRanger;
+    private float poacherPrice;
+    private float rangerPrice;
     private float pondPrice;
+    private float roadPrice;
+    private float jeepPrice;
     private GameManager gameManager;
 
     public ShopManager()
@@ -32,14 +38,42 @@ public class ShopManager
     }
     public void buyPond()
     {
-        if (availablePonds >= 1)
+        if (availablePonds >= 1 && canAfford(pondPrice))
         {
-            if (canAfford(pondPrice))
-            {
-                deductFunds(pondPrice);
-                //LOGIC TO ADD A NEW ANIMAL
-            }
+            deductFunds(pondPrice);
+            //LOGIC TO ADD A NEW ANIMAL
+        }
+    }
+    public void buyJeep()
+    {
+        if (canAfford(jeepPrice))
+        {
+            deductFunds(jeepPrice);
 
+        }
+    }
+    public void buyRoad()
+    {
+        if (canAfford(roadPrice))
+        {
+            deductFunds(roadPrice);
+        }
+    }
+    public void hireRanger()
+    {
+        if (availableRanger >= 1 && canAfford(rangerPrice))
+        {
+            deductFunds(rangerPrice);
+            //LOGIC TO ADD NEW ANIMAL
+        }
+
+    }
+    public void hirePoacher()
+    {
+        if (availablePoacher >= 1 && canAfford(poacherPricePrice))
+        {
+            deductFunds(poacherPricePrice);
+            //LOGIC TO ADD NEW ANIMAL
         }
     }
     public sellAnimal(Animal animal)
@@ -52,11 +86,11 @@ public class ShopManager
     }
     public void deductFunds(double amount)
     {
-        gameManager.increaseCapital(amount);
+        gameManager.decreaseCapital(amount);
     }
     public void addFunds(double amount)
     {
-        gameManager.decreaseCapital(amount);
+        gameManager.increaseCapital(amount);
     }
     //THIS METHOD CAN BE ELIMINATED BUT NEED TO BE DISCUSSED #12
     public bool canAfford(double price)
