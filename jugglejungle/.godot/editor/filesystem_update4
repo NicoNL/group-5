@@ -1,3 +1,8 @@
 res://scenes/main_menu.tscn
 res://scenes/menu.tscn
 res://scenes/GameScene.tscn
+res://scenes/GameScene.cs
+res://scenes/MainMenu.cs
+res://scripts/Menu.cs
+res://scripts/ShopItem.cs
+res://scripts/GameController.cs
