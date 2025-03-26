@@ -8,11 +8,5 @@ public partial class Menu : Control
 		GetNode<Button>("%Quit").Pressed += _QuitGame;
 	}
 	
-	private void _Start(){
-		GetTree().ChangeSceneToFile("res://game.tscn");
-	}
-	
-	private void _QuitGame(){
-		GetTree().Quit();
-	}
+
 }
