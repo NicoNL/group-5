@@ -7,12 +7,19 @@ public partial class GameScene : Control
 	{
 		var pauseButton = GetNode<Button>("%PauseButton");
 		var buyButton = GetNode<Button>("%BuyButton");
+		var resumeButton = GetNode<Button>("%ResumeButton");
+		var goToMenuButton = GetNode<Button>("%GoToMenuButton");
 
-		if (pauseButton != null)
-			pauseButton.Pressed += PauseGame;
+		if (pauseButton != null || resumeButton != null)
+			pauseButton.Pressed += PauseResumeGame;
 		else
 			GD.PrintErr("Pause button not found!");
-
+			
+		if(goToMenuButton != null)
+			goToMenuButton.Pressed += GoToMenu;
+		else
+			GD.PrintErr("Menu Button not found!");
+		
 		if (buyButton != null)
 			buyButton.Pressed += BuyItem;
 		else
@@ -21,11 +28,17 @@ public partial class GameScene : Control
 		//StartMovingObjects();
 	}
 
-	private void PauseGame()
+	private void GoToMenu(){
+		GD.Print("Went to Menu");
+		GetTree().ChangeSceneToFile("res://scenes/main_menu.tscn");
+	}
+
+	private void PauseResumeGame()
 	{
 		GD.Print("Game Paused");
-		GetTree().Paused = !GetTree().Paused; // Toggle pause state
+		//GetTree().Paused = !GetTree().Paused; // Toggle pause state
 	}
+
 
 	private void BuyItem()
 	{

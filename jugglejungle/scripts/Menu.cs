@@ -31,4 +31,6 @@ public partial class Menu : Control
 		GD.Print("Quitting game...");
 		GetTree().Quit();
 	}
+	
+	
 }

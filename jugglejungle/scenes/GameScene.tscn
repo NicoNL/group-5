@@ -193,3 +193,43 @@ custom_minimum_size = Vector2(70, 25)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_7s5hy")
 text = "Pause"
+
+[node name="PauseMenu" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 202.0
+offset_top = 154.0
+offset_right = -186.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+custom_minimum_size = Vector2(600, 450)
+layout_mode = 2
+color = Color(0.690196, 0.313726, 0.12549, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/ColorRect"]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 169.0
+offset_right = 382.0
+offset_bottom = 329.0
+
+[node name="ResumeButt" type="Button" parent="PauseMenu/ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+text = "Resume
+"
+
+[node name="GoToMenuButton" type="Button" parent="PauseMenu/ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Go to Menu"
+
+[connection signal="pressed" from="UI/HBoxContainer2/PauseButton" to="PauseMenu" method="show"]
+[connection signal="pressed" from="PauseMenu/ColorRect/VBoxContainer/ResumeButt" to="PauseMenu" method="hide"]
