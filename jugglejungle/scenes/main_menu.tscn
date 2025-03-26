@@ -199,6 +199,14 @@ layout_mode = 2
 text = "Back To Menu
 "
 
+[node name="Label" type="Label" parent="SettingMenuContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Sound"
+
+[node name="HSlider" type="HSlider" parent="SettingMenuContainer/ColorRect/VBoxContainer"]
+layout_mode = 2
+
 [connection signal="pressed" from="VBoxContainer/LoadGame" to="." method="_on_loadGame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="SettingMenuContainer" method="show"]
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

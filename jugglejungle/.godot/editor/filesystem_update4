@@ -1,6 +1,3 @@
 res://scenes/main_menu.tscn
-res://scenes/MainMenu.cs
-res://scenes/GameScene.cs
-res://scripts/Menu.cs
 res://scenes/menu.tscn
 res://scenes/GameScene.tscn

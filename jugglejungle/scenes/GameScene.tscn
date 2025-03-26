@@ -2,12 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://bkwyfjafnia70" path="res://assets/background_blurred.jpg" id="1_vh257"]
 [ext_resource type="Script" uid="uid://dieeqt4c6gcgt" path="res://scenes/GameScene.cs" id="1_xy3my"]
+[ext_resource type="Texture2D" uid="uid://cohsar65bq6dg" path="res://assets/GameBackGround.jpg" id="3_cxv17"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vh257"]
 texture = ExtResource("1_vh257")
 modulate_color = Color(0.720467, 0.720468, 0.720467, 1)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_vh257"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vh257"]
 bg_color = Color(0.780392, 0.54902, 0.164706, 0.992157)
@@ -75,7 +74,7 @@ offset_right = 425.0
 offset_bottom = 241.24
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_vh257")
+texture = ExtResource("3_cxv17")
 expand_mode = 1
 stretch_mode = 1
 
@@ -231,5 +230,56 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Go to Menu"
 
+[node name="ShopMenu" type="CenterContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 202.0
+offset_top = 154.0
+offset_right = -186.0
+offset_bottom = -38.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="ShopMenu"]
+custom_minimum_size = Vector2(600, 450)
+layout_mode = 2
+color = Color(0.690196, 0.313726, 0.12549, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ShopMenu/ColorRect"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 313.0
+offset_right = 385.0
+offset_bottom = 416.0
+
+[node name="ResumeButt" type="Button" parent="ShopMenu/ColorRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+text = "Go back
+
+"
+
+[node name="ShopButton" type="Button" parent="ShopMenu/ColorRect/VBoxContainer"]
+layout_mode = 2
+text = "Buy"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ShopMenu/ColorRect"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 37.0
+offset_right = 545.0
+offset_bottom = 287.0
+
+[node name="Ranger" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="Animal" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="UI/BuyButton" to="ShopMenu" method="show"]
 [connection signal="pressed" from="UI/HBoxContainer2/PauseButton" to="PauseMenu" method="show"]
 [connection signal="pressed" from="PauseMenu/ColorRect/VBoxContainer/ResumeButt" to="PauseMenu" method="hide"]
+[connection signal="pressed" from="ShopMenu/ColorRect/VBoxContainer/ResumeButt" to="ShopMenu" method="hide"]
