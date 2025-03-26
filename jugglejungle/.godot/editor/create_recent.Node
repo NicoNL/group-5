@@ -1,9 +1,11 @@
+Sprite2D
+Node
+Node2D
 TextureRect
 HBoxContainer
 Label
 HSlider
 Button
-Node2D
 Control
 Panel
 VBoxContainer

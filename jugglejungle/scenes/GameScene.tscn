@@ -1,8 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://pv6wob4ngsmp"]
+[gd_scene load_steps=17 format=3 uid="uid://pv6wob4ngsmp"]
 
 [ext_resource type="Texture2D" uid="uid://bkwyfjafnia70" path="res://assets/background_blurred.jpg" id="1_vh257"]
 [ext_resource type="Script" uid="uid://dieeqt4c6gcgt" path="res://scenes/GameScene.cs" id="1_xy3my"]
+[ext_resource type="Script" uid="uid://boo1riim5bnfv" path="res://scripts/GameController.cs" id="2_xs4ih"]
 [ext_resource type="Texture2D" uid="uid://cohsar65bq6dg" path="res://assets/GameBackGround.jpg" id="3_cxv17"]
+[ext_resource type="Texture2D" uid="uid://brp2bghp2sdpl" path="res://assets/giraf.png" id="5_yrli1"]
+[ext_resource type="Script" uid="uid://ctld0vl8aul2s" path="res://scripts/ShopItem.cs" id="6_6ytau"]
+[ext_resource type="Texture2D" uid="uid://d2dbsehhg6qex" path="res://assets/ranger.png" id="7_j40tv"]
+[ext_resource type="Texture2D" uid="uid://dijgj61dx7knr" path="res://assets/lion.png" id="8_6pl24"]
+[ext_resource type="Texture2D" uid="uid://bve43n771ge64" path="res://assets/jeep.png" id="9_w22tq"]
+[ext_resource type="Texture2D" uid="uid://c02s20ph6bv0m" path="res://assets/tree.png" id="10_e8rlm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vh257"]
 texture = ExtResource("1_vh257")
@@ -52,6 +59,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xy3my")
 
+[node name="GameController" type="Node" parent="."]
+script = ExtResource("2_xs4ih")
+
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -78,11 +88,7 @@ texture = ExtResource("3_cxv17")
 expand_mode = 1
 stretch_mode = 1
 
-[node name="MovingObject" type="Node2D" parent="Panel/GameView"]
-unique_name_in_owner = true
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0.00351917, 0.00351917, 0.00351917, 1)
-position = Vector2(256, 167)
+[node name="EntitiesLayer" type="Node2D" parent="Panel"]
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 1
@@ -267,17 +273,46 @@ layout_mode = 2
 text = "Buy"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="ShopMenu/ColorRect"]
-layout_mode = 0
-offset_left = 58.0
-offset_top = 37.0
-offset_right = 545.0
-offset_bottom = 287.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -225.0
+offset_right = 18424.0
+offset_bottom = 4111.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.032, 0.032)
+
+[node name="Giraffe" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_yrli1")
+script = ExtResource("6_6ytau")
 
 [node name="Ranger" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("7_j40tv")
+script = ExtResource("6_6ytau")
 
-[node name="Animal" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
+[node name="Lion" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
 layout_mode = 2
+texture = ExtResource("8_6pl24")
+script = ExtResource("6_6ytau")
+
+[node name="Jeep" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_w22tq")
+script = ExtResource("6_6ytau")
+
+[node name="Tree" type="TextureRect" parent="ShopMenu/ColorRect/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("10_e8rlm")
+script = ExtResource("6_6ytau")
+
+[node name="PreviewSprite" type="Sprite2D" parent="."]
 
 [connection signal="pressed" from="UI/BuyButton" to="ShopMenu" method="show"]
 [connection signal="pressed" from="UI/HBoxContainer2/PauseButton" to="PauseMenu" method="show"]
