@@ -1,2 +1,6 @@
-res://Menu.cs
-res://menu.tscn
+res://scenes/GameScene.tscn
+res://scenes/main_menu.tscn
+res://scenes/GameScene.cs
+res://scenes/MainMenu.cs
+res://scripts/Menu.cs
+res://scenes/MovingObject.cs

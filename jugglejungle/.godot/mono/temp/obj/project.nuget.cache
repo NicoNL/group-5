@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1HI5h0Cf+lPZbmratOXy9gs9nPrerYQq9y6dM/j1mbohOXtiGEP/dPOekB4+4JlJ9800A3PF/f9IdPOXyo7ZMw==",
+  "dgSpecHash": "5gdD23UEl23yMaWK05LtBf3SQV6CyXffxc+IjLKBbDb7GiJC6PRKea/jrNwqa3RnqOQQAAQ66b7okohcyPuDeQ==",
   "success": true,
-  "projectFilePath": "/Users/andythejustice/Desktop/GODOT/group-5/jugglejungle/JuggleJungle.csproj",
+  "projectFilePath": "C:\\Users\\LENOVO\\Desktop\\Software Technology\\group-5\\jugglejungle\\JuggleJungle.csproj",
   "expectedPackageFiles": [
-    "/Users/andythejustice/.nuget/packages/godot.sourcegenerators/4.4.0/godot.sourcegenerators.4.4.0.nupkg.sha512",
-    "/Users/andythejustice/.nuget/packages/godotsharp/4.4.0/godotsharp.4.4.0.nupkg.sha512",
-    "/Users/andythejustice/.nuget/packages/godotsharpeditor/4.4.0/godotsharpeditor.4.4.0.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\godot.sourcegenerators\\4.4.0\\godot.sourcegenerators.4.4.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\godotsharp\\4.4.0\\godotsharp.4.4.0.nupkg.sha512",
+    "C:\\Users\\LENOVO\\.nuget\\packages\\godotsharpeditor\\4.4.0\\godotsharpeditor.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }

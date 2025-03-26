@@ -15,3 +15,20 @@
 /Users/andythejustice/Desktop/GODOT/group-5/jugglejungle/.godot/mono/temp/obj/Debug/JuggleJungle.pdb
 /Users/andythejustice/Desktop/GODOT/group-5/jugglejungle/.godot/mono/temp/obj/Debug/JuggleJungle.genruntimeconfig.cache
 /Users/andythejustice/Desktop/GODOT/group-5/jugglejungle/.godot/mono/temp/obj/Debug/ref/JuggleJungle.dll
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\bin\Debug\JuggleJungle.deps.json
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\bin\Debug\JuggleJungle.runtimeconfig.json
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\bin\Debug\JuggleJungle.dll
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\bin\Debug\JuggleJungle.pdb
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.AssemblyInfoInputs.cache
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.AssemblyInfo.cs
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.csproj.CopyComplete
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.dll
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\refint\JuggleJungle.dll
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.pdb
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\JuggleJungle.genruntimeconfig.cache
+C:\Users\LENOVO\Desktop\Software Technology\group-5\jugglejungle\.godot\mono\temp\obj\Debug\ref\JuggleJungle.dll
