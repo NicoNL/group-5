@@ -1,3 +1,3 @@
-public classs GameState{
+public class GameState{
     
 }

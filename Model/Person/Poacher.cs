@@ -1,8 +1,7 @@
 public class Poacher : Person
 {
-    public Poacher(string name)
+    public Poacher(string name, PersonType type) : base(name, type)
     {
-        super(name);
     }
     public void hunt(Animal animal){
         //PLACEHOLDER

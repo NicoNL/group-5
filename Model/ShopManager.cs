@@ -17,8 +17,11 @@ public class ShopManager
 
     public ShopManager()
     {
-        availableAnimals = new Dictionary<AnimalType, double>();
+        availableAnimals = new Dictionary<Species, double>();
+        availablePlants = new Dictionary<PlantType, double>();
+        jeepPrice = 50;
         pondPrice = 100;
+    
     }
     public void buyAnimal(Species type)
     {
@@ -28,7 +31,7 @@ public class ShopManager
             //LOGIC TO ADD A NEW ANIMAL
         }
     }
-    public void buyPlant(PlanType type)
+    public void buyPlant(PlantType type)
     {
         if (canAfford(availablePlants[type]))
         {
@@ -70,17 +73,17 @@ public class ShopManager
     }
     public void hirePoacher()
     {
-        if (availablePoacher >= 1 && canAfford(poacherPricePrice))
+        if (availablePoacher >= 1 && canAfford(poacherPrice))
         {
-            deductFunds(poacherPricePrice);
+            deductFunds(poacherPrice);
             //LOGIC TO ADD NEW ANIMAL
         }
     }
-    public sellAnimal(Animal animal)
+    public void sellAnimal(Animal animal)
     {
-        addFunds(availableAnimals[animal.getType()]);
+        addFunds(availableAnimals[animal.getSpecies()]);
     }
-    public sellPlant(Plant plant)
+    public void sellPlant(Plant plant)
     {
         addFunds(availablePlants[plant.getType()]);
     }
@@ -92,10 +95,10 @@ public class ShopManager
     {
         gameManager.increaseCapital(amount);
     }
-    //THIS METHOD CAN BE ELIMINATED BUT NEED TO BE DISCUSSED #12
+    //THIS METHOD CAN BE ELIMINATED BUT NEED TO BE DISCUSSED #12map.getAllAnimals();
     public bool canAfford(double price)
     {
-        int capital = gameManager.getCurrentCapital();
-        return capital - price < 0;
+        double capital = gameManager.getCurrentCapital();
+        return (capital - price) < 0;
     }
 }

@@ -11,7 +11,7 @@ public class Pond
         this.location = location;
     }
 
-    public setWaterLevel(float waterLevel){
+    public void setWaterLevel(float waterLevel){
         this.waterLevel = waterLevel;
     }
     public float getWaterLevel(){

@@ -22,6 +22,8 @@ public class GameManager
         this.date = date;
         this.capital = capital;
         this.difficulty = difficulty;
+        gameState = new GameState();
+        map = new Map(4);
 
     }
 
@@ -66,7 +68,7 @@ public class GameManager
     }
     public bool isNight()
     {
-        //PLACEHOLDER
+        return false;
     }
     public void increaseCapital(double amount)
     {
@@ -76,89 +78,92 @@ public class GameManager
     //CHECK SHOP MANAGER FOR FURTHER UNDERSTANDING
     public bool decreaseCapital(double amount)
     {
-        if(capital - amount <= 0){
+        if (capital - amount <= 0)
+        {
             capital -= amount;
-        }else{
+        }
+        else
+        {
             return false;
         }
         return true;
     }
-    public int getCurrentCapital()
+    public double getCurrentCapital()
     {
         return capital;
     }
     public void AddAnimal(Animal animal)
     {
-        mapAddAnimal.Add(animal);
+        map.addAnimal(animal);
     }
     public List<Animal> getAllAnimals()
     {
-        return Map.getAllAnimals();
+        return map.getAllAnimals();
     }
-    public addTourist(Tourist tourist)
+    public void addTourist(Tourist tourist)
     {
-        map.AddTourist(tourist);
+        map.addTourist(tourist);
     }
-    public removeTourist(Tourist tourist)
+    public void removeTourist(Tourist tourist)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
         map.removeTourist(tourist);
     }
-    public void getAllTourists()
+    public List<Tourist> getAllTourists()
     {
         return map.getAllTourists();
     }
 
-    public addRanger(Ranger ranger)
+    public void addRanger(Ranger ranger)
     {
-        map.AddRanger(ranger);
+        map.addRanger(ranger);
     }
-    public removeRanger(Ranger ranger)
+    public void removeRanger(Ranger ranger)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        rangers.remove(ranger);
+        map.removeRanger(ranger);
     }
-    public void getAllRangers()
+    public List<Ranger> getAllRangers()
     {
-        return rangers;
+        return map.getAllRangers();
     }
 
-    public addPond(Pond pond)
+    public void addPond(Pond pond)
     {
-        map.AddPon(pond);
+        map.addPond(pond);
     }
-    public removePond(Pond pond)
+    public void removePond(Pond pond)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
         map.removePond(pond);
     }
-    public void getAllPonds()
+    public List<Pond> getAllPonds()
     {
-        return map.getAllPonds;
+        return map.getAllPonds();
     }
 
-    public addRoad(Road road)
+    public void addRoad(Road road)
     {
         map.addRoad(road);
     }
-    public removeRoad(Road road)
+    public void removeRoad(Road road)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
         map.removeRoad(road);
     }
-    public void getAllRoads()
+    public List<Road> getAllRoads()
     {
         return map.getAllRoads();
     }
-    public bool checkWinningCondition()
-    {
+    // public bool checkWinningCondition()
+    // {
 
-    }
-    public bool checkWinningCondition()
-    {
+    // }
+    // public bool checkWinningCondition()
+    // {
 
-    }
-    public gameState getCurrentState()
+    // }
+    public GameState getCurrentState()
     {
         return gameState;
     }
@@ -166,13 +171,16 @@ public class GameManager
     {
         gameState = state;
     }
-    public int getDay(){
+    public int getDay()
+    {
         return date[0];
     }
-    public int getMonth(){
+    public int getMonth()
+    {
         return date[1];
     }
-    public int getYear(){
+    public int getYear()
+    {
         return date[2];
     }
 }

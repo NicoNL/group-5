@@ -1,24 +1,30 @@
 using System;
 using System.Collections;
-
+using System.Collections.Generic;
 public class Map
 {
     private Terrain[][] grid;
     // INSTEAD OF A CLASS FOR DENOTING THE MAP SIZE, AN INT IS NOW USED
     private int mapSize;
-    private ArrayList<Animal> animals = ArrayList<Animal>;
-    private ArrayList<Tourist> tourists = ArrayList<Tourist>;
-    private ArrayList<Ranger> rangers = ArrayList<Ranger>;
-    private ArrayList<Pond> ponds = ArrayList<Pond>;
-    private ArrayList<Road> roads = ArrayList<Road>;
-    private ArrayList<Plant> plants = ArrayList<Plant>;
+    private List<Animal> animals = new List<Animal>();
+    private List<Tourist> tourists = new List<Tourist>();
+    private List<Ranger> rangers = new List<Ranger>();
+    private List<Pond> ponds = new List<Pond>();
+    private List<Road> roads = new List<Road>();
+    private List<Plant> plants = new List<Plant>();
+
 
     public Map(int mapSize)
     {
         this.mapSize = mapSize;
+        grid = new Terrain[mapSize][];
+        for (int i = 0; i < mapSize; i++)
+        {
+            grid[i] = new Terrain[mapSize]; 
+        }
     }
 
-    public GenerateMap()
+    public void GenerateMap()
     {
         //PLACEHOLDER
     }
@@ -38,72 +44,73 @@ public class Map
     {
         return animals;
     }
-    public void AddAnimal(Animal animal)
+    public void addAnimal(Animal animal)
     {
         animals.Add(animal);
     }
-    public removeAnimal(Animal animal)
+    public void removeAnimal(Animal animal)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        animals.remove(animals);
+        animals.Remove(animal);
     }
-    public addTourist(Tourist tourist)
+    public void addTourist(Tourist tourist)
     {
         tourists.Add(tourist);
     }
 
-    public removeTourist(Tourist tourist)
+    public void removeTourist(Tourist tourist)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        tourists.remove(tourist);
+        tourists.Remove(tourist);
     }
-    public void getAllTourists()
+    public List<Tourist> getAllTourists()
     {
         return tourists;
     }
-        public addRanger(Ranger ranger)
+    public void addRanger(Ranger ranger)
     {
         rangers.Add(ranger);
     }
-    public removeRanger(Ranger ranger)
+    public void removeRanger(Ranger ranger)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        rangers.remove(ranger);
+        rangers.Remove(ranger);
     }
-    public void getAllRangers()
+    public List<Ranger> getAllRangers()
     {
         return rangers;
     }
 
-    public addPond(Pond pond)
+    public void addPond(Pond pond)
     {
         ponds.Add(pond);
     }
-    public removePond(Pond pond)
+    public void removePond(Pond pond)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        ponds.remove(pond);
+        ponds.Remove(pond);
     }
-    public void getAllPonds()
+    public List<Pond> getAllPonds()
     {
         return ponds;
     }
 
-    public addRoad(Road road)
+    public void addRoad(Road road)
     {
         roads.Add(road);
     }
-    public removeRoad(Road road)
+    public void removeRoad(Road road)
     {
         //PLACEHOLDER FOR HABLDING NOT FOUND
-        roads.remove(road);
+        roads.Remove(road);
     }
-    public void getAllRoads()
+    public List<Road> getAllRoads()
     {
         return roads;
     }
+    public int getMapSize(){
+        return mapSize;
+    }
 
     //NO DISPLAY MAP FUNCTION ADDED BECUASE THIS IS PART OF THE VIEW #5
-
-
 }

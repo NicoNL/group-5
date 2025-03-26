@@ -1,6 +1,5 @@
-public class Ranger{
-    public Ranger(string name){
-        super(name);    
+public class Ranger : Person{
+    public Ranger(string name, PersonType type) : base(name, type){
     } 
     public void checkAnimal(Animal animal){
         //PLACEHOLDER

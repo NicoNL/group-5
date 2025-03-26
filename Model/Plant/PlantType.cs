@@ -1,4 +1,4 @@
-public enum PlanType{
+public enum PlantType{
     TREE,
     GRASS,
     BUSH,

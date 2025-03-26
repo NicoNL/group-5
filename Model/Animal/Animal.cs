@@ -4,8 +4,8 @@ using System.Numerics;
 public abstract class Animal
 {
     public int LifespanLimit { get; set; }
-    private Dictionary<Animal, double> availableAnimals; 
-    private AnimalType Type;
+    private Dictionary<Animal, double> availableAnimals = new(); 
+    private AnimalType type;
     private Species species;
     public int Age { get; private set; }
     public int ConsumpLevel { get; set; }
@@ -59,7 +59,7 @@ public abstract class Animal
     // Eating and drinking
     private void Eat(Plant food)
     {
-        Console.WriteLine($"Eating {food.getName()}.");
+        Console.WriteLine($"Eating {food.getType()}.");
         HungerLevel = 0;
     }
 
@@ -81,16 +81,7 @@ public abstract class Animal
     }
 
     // Reproduction
-    public Animal Reproduce(Animal partner)
-    {
-        if (CanReproduce && partner.CanReproduce)
-        {
-            Console.WriteLine("Reproduction successful!");
-            return new Animal(LifespanLimit, ConsumpLevel, Price);
-        }
-        Console.WriteLine("Reproduction failed.");
-        return null;
-    }
+    // public abstract Animal Reproduce(Animal partner);
     public Species getSpecies(){
         return species;
     }
@@ -133,5 +124,8 @@ public abstract class Animal
     {
         health = Math.Clamp(health + value, 0, 100);
         if (health <= 0) Die();
+    }
+    public AnimalType getType(){
+        return type;
     }
 }

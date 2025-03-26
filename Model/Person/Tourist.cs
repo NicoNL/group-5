@@ -1,10 +1,9 @@
 public class Tourist : Person
 {
-    private float budget;
-    private float joyLevel;
-    public Tourist(string name)
+    private double budget;
+    private double joyLevel;
+    public Tourist(string name, PersonType type) : base(name, type)
     {
-        super(name);
         joyLevel = 100;
     }
     public void takePhoto(Animal animal)

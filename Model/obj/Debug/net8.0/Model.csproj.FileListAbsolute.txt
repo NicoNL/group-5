@@ -1,0 +1,14 @@
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/bin/Debug/net8.0/Model
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/bin/Debug/net8.0/Model.deps.json
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/bin/Debug/net8.0/Model.runtimeconfig.json
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/bin/Debug/net8.0/Model.dll
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/bin/Debug/net8.0/Model.pdb
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/Model.GeneratedMSBuildEditorConfig.editorconfig
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/Model.AssemblyInfoInputs.cache
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/Model.AssemblyInfo.cs
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/Model.csproj.CoreCompileInputs.cache
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/Model.dll
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/refint/Model.dll
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/Model.pdb
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/Model.genruntimeconfig.cache
+/home/niconl/Documents/ELTE/6/SOFT TECH/group-5/Model/obj/Debug/net8.0/ref/Model.dll

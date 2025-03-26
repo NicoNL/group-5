@@ -1,5 +1,6 @@
 public class Bush : Plant{
-    public Bush(PlanType type){
-        super(type);
+    public Bush(PlantType type) : base (type)
+    {
+
     }
 }
