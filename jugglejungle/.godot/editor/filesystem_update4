@@ -1,2 +1,4 @@
 res://menu.tscn
 res://Menu/menu.tscn
+res://Controller/GameController.cs
+res://Menu/Menu.cs
