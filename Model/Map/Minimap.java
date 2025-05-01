@@ -1,6 +1,6 @@
 package Model.Map;
 
-import Model.Animal.Animal;
+import Model.Entity.Animal.Animal;
 import Model.Plant.Plant;
 import java.util.ArrayList;
 import java.util.List;

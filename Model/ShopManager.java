@@ -2,10 +2,11 @@ package Model;
 
 import java.util.HashMap;
 import java.util.Map;
-import Model.Animal.Species;
+
 import Model.Plant.PlantType;
+import Model.Entity.Animal.Animal;
+import Model.Entity.Animal.Species;
 import Model.Plant.Plant;
-import Model.Animal.Animal;
 
 public class ShopManager {
     private Map<Species, Double> availableAnimals;

@@ -3,12 +3,12 @@ package Model.Map;
 import java.util.ArrayList;
 import java.util.List;
 
-import Model.Animal.Animal;
-import Model.Animal.Carnivore;
-import Model.Animal.Herbivore;
+import Model.Entity.Animal.Animal;
+import Model.Entity.Animal.Carnivore;
+import Model.Entity.Animal.Herbivore;
+import Model.Entity.Person.Ranger;
+import Model.Entity.Person.Tourist;
 import Model.Plant.Plant;
-import Model.Person.Tourist;
-import Model.Person.Ranger;
 import Model.Scenery.Pond;
 import Model.Transportation.Road;
 import Model.Scenery.Terrain;      

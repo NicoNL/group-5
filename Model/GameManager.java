@@ -1,27 +1,36 @@
 package Model;  
 
-import java.util.List;
+import Model.Entity.Animal.Animal;
+import Model.Entity.Person.Ranger;
+import Model.Entity.Person.Tourist;
 import Model.Map.Map;
 import Model.Scenery.Pond;
-import Model.Animal.Animal;
-import Model.Person.Tourist;
-import Model.Person.Ranger;
 import Model.Transportation.Road;
+import java.util.List;
 
 public class GameManager {
     private double gameTime;
     private int[] date;
     private double capital;
+    private int customerCount;
     private GameState gameState;
     private Mode difficulty;
     private Map map;
+    private boolean isGameOver;
 
-    public GameManager(int[] date, double capital, Mode difficulty) {
-        this.date = date;
+    public GameManager(int[] date, int customerCount, double capital, Mode difficulty) {
+        // Initialize date array with default values if null
+        if (date == null || date.length != 3) {
+            this.date = new int[]{1, 1, 2024}; // Default to January 1st, 2024
+        } else {
+            this.date = date;
+        }
+        this.customerCount = customerCount;
         this.capital = capital;
         this.difficulty = difficulty;
         this.gameState = new GameState();
         this.map = new Map(4);
+        this.isGameOver = false;
     }
 
     public void startNewGame() {
@@ -65,21 +74,32 @@ public class GameManager {
     }
 
     public void increaseCapital(double amount) {
-        capital += amount;
+        this.capital += amount;
     }
 
-    public boolean decreaseCapital(double amount) {
-        if (capital - amount <= 0) {
-            capital -= amount;
-        } else {
-            return false;
+    public void decreaseCapital(double amount) {
+        this.capital -= amount;
+        if (this.capital <= 0) {
+            this.isGameOver = true;
         }
-        return true;
     }
 
     public double getCurrentCapital() {
         return capital;
     }
+
+    public void increaseCustomer(int amount) {
+        customerCount += amount;
+    }
+
+    public void removeCustomer(int amount) {
+        customerCount = Math.max(customerCount - amount,0);
+    }
+
+    public void setCustomer(int amount) {
+        customerCount = Math.max(amount,0);
+    }
+
 
     public void addAnimal(Animal animal) {
         map.addAnimal(animal);
@@ -100,6 +120,10 @@ public class GameManager {
 
     public List<Tourist> getAllTourists() {
         return map.getAllTourists();
+    }
+
+    public int getAllCustomers() {
+        return customerCount;
     }
 
     public void addRanger(Ranger ranger) {
@@ -150,14 +174,31 @@ public class GameManager {
     }
 
     public int getDay() {
-        return date[0];
+        return date != null ? date[0] : 1;
     }
 
     public int getMonth() {
-        return date[1];
+        return date != null ? date[1] : 1;
     }
 
     public int getYear() {
-        return date[2];
+        return date != null ? date[2] : 2024;
+    }
+
+    public void setCapital(double amount) {
+        this.capital = amount;
+    }
+    
+    public void setCustomerCount(int count) {
+        this.customerCount = Math.max(0, count);
+    }
+    
+    public boolean isGameOver() {
+        return isGameOver;
+    }
+
+    public void resetGame() {
+        this.capital = 1000.0;
+        this.isGameOver = false;
     }
 } 
